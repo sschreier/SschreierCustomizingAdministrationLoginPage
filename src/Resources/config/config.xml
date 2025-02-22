@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/master/src/Core/System/SystemConfig/Schema/config.xsd">
+    <card>
+        <title>general settings</title>
+        <title lang="de-DE">Allgemeine Einstellungen</title>
+
+        <input-field type="colorpicker">
+            <name>loginBackgroundColor</name>
+            <label>background color of the page</label>
+            <label lang="de-DE">Hintergrundfarbe der Seite</label>
+            <css>sschreier-customizing-administration-login-page-login-background-color</css>
+            <defaultValue>#f0f2f5</defaultValue>
+            <placeholder>#f0f2f5</placeholder>
+        </input-field>
+    </card>
+
+    <card>
+        <title>general settings for the left side</title>
+        <title lang="de-DE">Allgemeine Einstellungen für die linke Seite</title>
+
+        <input-field type="bool">
+            <name>showLeftSide</name>
+            <label>show left side</label>
+            <label lang="de-DE">linke Seite anzeigen</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+
+        <input-field type="bool">
+            <name>showBackgroundImage</name>
+            <label>show background image</label>
+            <label lang="de-DE">Hintergrundbild anzeigen</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+
+        <component name="sw-media-field">
+            <name>backgroundImage</name>
+            <label>background image</label>
+            <label lang="de-DE">Hintergrundbild</label>
+        </component>
+
+        <input-field type="colorpicker">
+            <name>backgroundColor</name>
+            <label>background color</label>
+            <label lang="de-DE">Hintergrundfarbe</label>
+            <css>sschreier-customizing-administration-login-page-background-color</css>
+            <defaultValue>#0042a0</defaultValue>
+            <placeholder>#0042a0</placeholder>
+        </input-field>
+
+        <input-field type="int">
+            <name>headlinePaddingLeft</name>
+            <label>inner distance of the headlines to the left in pixels</label>
+            <label lang="de-DE">Innenabstand der Überschriften nach links in Pixeln</label>
+            <defaultValue>60</defaultValue>
+            <placeholder>60</placeholder>
+        </input-field>
+
+        <input-field type="int">
+            <name>headlinesPaddingBottom</name>
+            <label>inner distance of the headlines downwards in pixels</label>
+            <label lang="de-DE">Innenabstand der Überschriften nach unten in Pixeln</label>
+            <defaultValue>115</defaultValue>
+            <placeholder>115</placeholder>
+        </input-field>
+
+        <input-field type="bool">
+            <name>showHeadline</name>
+            <label>show headline</label>
+            <label lang="de-DE">Überschrift anzeigen</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+
+        <input-field type="text">
+            <name>headline</name>
+            <label>headline</label>
+            <label lang="de-DE">Überschrift</label>
+            <placeholder>Hallo!</placeholder>
+        </input-field>
+
+        <input-field type="colorpicker">
+            <name>headlineFontColor</name>
+            <label>font color of the headline</label>
+            <label lang="de-DE">Schriftfarbe der Überschrift</label>
+            <css>sschreier-customizing-administration-login-page-headline-font-color</css>
+            <defaultValue>#FFFFFF</defaultValue>
+            <placeholder>#FFFFFF</placeholder>
+        </input-field>
+
+        <input-field type="int">
+            <name>headlineFontSize</name>
+            <label>font size of the headline in pixels</label>
+            <label lang="de-DE">Schriftgröße der Überschrift in Pixeln</label>
+            <defaultValue>60</defaultValue>
+            <placeholder>60</placeholder>
+        </input-field>
+
+        <input-field type="bool">
+            <name>showSubHeadline</name>
+            <label>show sub headline</label>
+            <label lang="de-DE">Text unterhalb der Überschrift anzeigen</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+
+        <input-field type="text">
+            <name>subHeadline</name>
+            <label>sub headline</label>
+            <label lang="de-DE">Text unterhalb der Überschrift</label>
+            <placeholder>Willkommen zurück.</placeholder>
+        </input-field>
+
+        <input-field type="colorpicker">
+            <name>subHeadlineFontColor</name>
+            <label>font color of the sub headline</label>
+            <label lang="de-DE">Schriftfarbe des Textes unterhalb der Überschrift</label>
+            <css>sschreier-customizing-administration-login-page-sub-headline-font-color</css>
+            <defaultValue>#FFFFFF</defaultValue>
+            <placeholder>#FFFFFF</placeholder>
+        </input-field>
+
+        <input-field type="int">
+            <name>subHeadlineFontSize</name>
+            <label>font size of the sub headline in pixels</label>
+            <label lang="de-DE">Schriftgröße des Textes unterhalb der Überschrift in Pixeln</label>
+            <defaultValue>48</defaultValue>
+            <placeholder>48</placeholder>
+        </input-field>
+    </card>
+
+    <card>
+        <title>general settings for the right side</title>
+        <title lang="de-DE">Allgemeine Einstellungen für die rechte Seite</title>
+
+        <input-field type="bool">
+            <name>showShopwareBadge</name>
+            <label>show shopware badge</label>
+            <label lang="de-DE">Shopware-Logo anzeigen</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+
+        <input-field type="int">
+            <name>contentPaddingLeftRight</name>
+            <label>inner distance to the left and to the right in pixels</label>
+            <label lang="de-DE">Innenabstand nach links und rechts in Pixeln</label>
+            <defaultValue>50</defaultValue>
+            <placeholder>50</placeholder>
+        </input-field>
+
+        <input-field type="int">
+            <name>contentPaddingTopBottom</name>
+            <label>inner distance upwards and downwards in pixels</label>
+            <label lang="de-DE">Innenabstand nach oben und unten in Pixeln</label>
+            <defaultValue>130</defaultValue>
+            <placeholder>130</placeholder>
+        </input-field>
+
+        <input-field type="bool">
+            <name>showContentHeadline</name>
+            <label>show headline</label>
+            <label lang="de-DE">Überschrift anzeigen</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+
+        <input-field type="text">
+            <name>contentHeadline</name>
+            <label>headline</label>
+            <label lang="de-DE">Überschrift</label>
+            <placeholder>Melde Dich in Deinem Shopware-Shop an</placeholder>
+        </input-field>
+
+        <input-field type="colorpicker">
+            <name>contentHeadlineFontColor</name>
+            <label>font color of the headline</label>
+            <label lang="de-DE">Schriftfarbe der Überschrift</label>
+            <css>sschreier-customizing-administration-login-page-content-headline-font-color</css>
+            <defaultValue>#52667a</defaultValue>
+            <placeholder>#52667a</placeholder>
+        </input-field>
+
+        <input-field type="int">
+            <name>contentHeadlineFontSize</name>
+            <label>font size of the headline in pixels</label>
+            <label lang="de-DE">Schriftgröße der Überschrift in Pixeln</label>
+            <defaultValue>20</defaultValue>
+            <placeholder>20</placeholder>
+        </input-field>
+
+        <input-field type="bool">
+            <name>showContentSubHeadline</name>
+            <label>show sub headline</label>
+            <label lang="de-DE">Text unterhalb der Überschrift anzeigen</label>
+            <defaultValue>false</defaultValue>
+        </input-field>
+
+        <input-field type="text">
+            <name>contentSubHeadline</name>
+            <label>sub headline</label>
+            <label lang="de-DE">Text unterhalb der Überschrift</label>
+        </input-field>
+
+        <input-field type="colorpicker">
+            <name>contentSubHeadlineFontColor</name>
+            <label>font color of the sub headline</label>
+            <label lang="de-DE">Schriftfarbe des Textes unterhalb der Überschrift</label>
+            <css>sschreier-customizing-administration-login-page-content-sub-headline-font-color</css>
+            <defaultValue>#52667a</defaultValue>
+            <placeholder>#52667a</placeholder>
+        </input-field>
+
+        <input-field type="int">
+            <name>contentSubHeadlineFontSize</name>
+            <label>font size of the sub headline in pixels</label>
+            <label lang="de-DE">Schriftgröße des Textes unterhalb der Überschrift in Pixeln</label>
+            <defaultValue>14</defaultValue>
+            <placeholder>14</placeholder>
+        </input-field>
+
+        <input-field type="int">
+            <name>contentSubHeadlineMarginTop</name>
+            <label>outer distance of the sub headline upwards in pixels</label>
+            <label lang="de-DE">Außenabstand des Textes unterhalb der Überschrift nach oben in Pixeln</label>
+            <defaultValue>5</defaultValue>
+            <placeholder>5</placeholder>
+        </input-field>
+    </card>
+</config>

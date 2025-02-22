@@ -1,0 +1,174 @@
+{% sw_extends "administration/index.html.twig" %}
+
+{% block administration_templates %}
+    {% block administration_templates_customizingadministrationloginpage_before %}{% endblock %}
+
+    {{ parent() }}
+
+    {% block administration_templates_customizingadministrationloginpage_custom %}
+        {# css implementation because of reduced app without plugin possibility when user is not logged in: https://github.com/shopware/shopware/blob/trunk/src/Administration/Resources/app/administration/src/core/application.ts#L352 #}
+        <style>
+            {% if config('SschreierCustomizingAdministrationLoginPage.config.loginBackgroundColor') %}
+                .sw-login {
+                    background-color: {{ config('SschreierCustomizingAdministrationLoginPage.config.loginBackgroundColor') }};
+                }
+            {% endif %}
+
+            {% if config('SschreierCustomizingAdministrationLoginPage.config.showLeftSide') %}
+                {% if config('SschreierCustomizingAdministrationLoginPage.config.showBackgroundImage') %}
+                    {% if config('SschreierCustomizingAdministrationLoginPage.config.backgroundImage') %}
+                        {% set backgroundImage = sschreier_get_media_url_by_media_id(config('SschreierCustomizingAdministrationLoginPage.config.backgroundImage')) %}
+                        .sw-login .sw-login__image {
+                            background-image: url("{{ backgroundImage}} ");
+                        }
+                    {% endif %}
+                {% else %}
+                    .sw-login .sw-login__image {
+                        background-image: none;
+                        background-color: {% if config('SschreierCustomizingAdministrationLoginPage.config.backgroundColor') %}{{ config('SschreierCustomizingAdministrationLoginPage.config.backgroundColor') }}{% else %}#0042a0{% endif %};
+                    }
+                {% endif %}
+
+                {% if config('SschreierCustomizingAdministrationLoginPage.config.headlinePaddingLeft') or config('SschreierCustomizingAdministrationLoginPage.config.headlinesPaddingBottom') %}
+                    .sw-login .sw-login__container .sw-login__image-headlines {
+                        padding-left: {% if config('SschreierCustomizingAdministrationLoginPage.config.headlinePaddingLeft') %}{{ config('SschreierCustomizingAdministrationLoginPage.config.headlinePaddingLeft') }}{% else %}60{% endif %}px;
+                        padding-bottom: {% if config('SschreierCustomizingAdministrationLoginPage.config.headlinesPaddingBottom') %}{{ config('SschreierCustomizingAdministrationLoginPage.config.headlinesPaddingBottom') }}{% else %}115{% endif %}px;
+                    }
+                {% endif %}
+
+                {% if not(config('SschreierCustomizingAdministrationLoginPage.config.showHeadline')) %}
+                    .sw-login .sw-login__container .sw-login__headline {
+                        display: none;
+                    }
+                {% else %}
+                    {% if config('SschreierCustomizingAdministrationLoginPage.config.headline') %}
+                        .sw-login .sw-login__container .sw-login__headline {
+                            font-size: 0;
+                        }
+
+                        .sw-login .sw-login__container .sw-login__headline::before {
+                            content: "{{ config('SschreierCustomizingAdministrationLoginPage.config.headline') }}";
+                            font-size: {% if config('SschreierCustomizingAdministrationLoginPage.config.headlineFontSize') %}{{ config('SschreierCustomizingAdministrationLoginPage.config.headlineFontSize') }}{% else %}60{% endif %}px;
+                        }
+                    {% else %}
+                        {% if config('SschreierCustomizingAdministrationLoginPage.config.headlineFontSize') %}
+                            .sw-login .sw-login__container .sw-login__headline {
+                                font-size: {{ config('SschreierCustomizingAdministrationLoginPage.config.headlineFontSize') }}px;
+                            }
+                        {% endif %}
+                    {% endif %}
+
+                    {% if config('SschreierCustomizingAdministrationLoginPage.config.headlineFontColor') %}
+                        .sw-login .sw-login__container .sw-login__headline {
+                            color: {{ config('SschreierCustomizingAdministrationLoginPage.config.headlineFontColor') }};
+                        }
+                    {% endif %}
+                {% endif %}
+
+                {% if not(config('SschreierCustomizingAdministrationLoginPage.config.showSubHeadline')) %}
+                    .sw-login .sw-login__container .sw-login__sub-headline {
+                        display: none;
+                    }
+                {% else %}
+                    {% if config('SschreierCustomizingAdministrationLoginPage.config.subHeadline') %}
+                        .sw-login .sw-login__container .sw-login__sub-headline {
+                            font-size: 0;
+                        }
+
+                        .sw-login .sw-login__container .sw-login__sub-headline::before {
+                            content: "{{ config('SschreierCustomizingAdministrationLoginPage.config.subHeadline') }}";
+                            font-size: {% if config('SschreierCustomizingAdministrationLoginPage.config.subHeadlineFontSize') %}{{ config('SschreierCustomizingAdministrationLoginPage.config.subHeadlineFontSize') }}{% else %}48{% endif %}px;
+                        }
+                    {% else %}
+                        {% if config('SschreierCustomizingAdministrationLoginPage.config.subHeadlineFontSize') %}
+                            .sw-login .sw-login__container .sw-login__sub-headline {
+                                font-size: {{ config('SschreierCustomizingAdministrationLoginPage.config.subHeadlineFontSize') }}px;
+                            }
+                        {% endif %}
+                    {% endif %}
+
+                    {% if config('SschreierCustomizingAdministrationLoginPage.config.subHeadlineFontColor') %}
+                        .sw-login .sw-login__container .sw-login__sub-headline {
+                            color: {{ config('SschreierCustomizingAdministrationLoginPage.config.subHeadlineFontColor') }};
+                        }
+                    {% endif %}
+                {% endif %}
+            {% else %}
+                .sw-login .sw-login__container {
+                    display: block;
+                }
+
+                .sw-login .sw-login__container .sw-login__image {
+                    display: none;
+                }
+            {% endif %}
+
+            {% if not(config('SschreierCustomizingAdministrationLoginPage.config.showShopwareBadge')) %}
+                .sw-login .sw-login__container .sw-login__badge {
+                    display: none;
+                }
+            {% endif %}
+
+            {% if config('SschreierCustomizingAdministrationLoginPage.config.contentPaddingLeftRight') >= 0 or config('SschreierCustomizingAdministrationLoginPage.config.contentPaddingTopBottom') >= 0 %}
+                .sw-login .sw-login__container .sw-login__content {
+                    {% if config('SschreierCustomizingAdministrationLoginPage.config.contentPaddingLeftRight') >= 0 and config('SschreierCustomizingAdministrationLoginPage.config.contentPaddingTopBottom') >= 0 %}
+                        padding: {{ config('SschreierCustomizingAdministrationLoginPage.config.contentPaddingTopBottom') }}px {{ config('SschreierCustomizingAdministrationLoginPage.config.contentPaddingLeftRight') }}px;
+                    {% elseif config('SschreierCustomizingAdministrationLoginPage.config.contentPaddingLeftRight') < 0 and config('SschreierCustomizingAdministrationLoginPage.config.contentPaddingTopBottom') > 0 %}
+                        padding: {{ config('SschreierCustomizingAdministrationLoginPage.config.contentPaddingTopBottom') }}px 60px;
+                    {% elseif config('SschreierCustomizingAdministrationLoginPage.config.contentPaddingLeftRight') > 0 and config('SschreierCustomizingAdministrationLoginPage.config.contentPaddingTopBottom') < 0 %}
+                        padding: 130px {{ config('SschreierCustomizingAdministrationLoginPage.config.contentPaddingLeftRight') }}px;
+                    {% endif %}
+                }
+            {% endif %}
+
+            {% if not(config('SschreierCustomizingAdministrationLoginPage.config.showContentHeadline')) %}
+                .sw-login .sw-login__container .sw-login__content-headline {
+                    display: none;
+                }
+            {% else %}
+                {% if config('SschreierCustomizingAdministrationLoginPage.config.contentHeadline') %}
+                    .sw-login .sw-login__container .sw-login__content-headline {
+                        font-size: 0;
+                    }
+
+                    .sw-login .sw-login__container .sw-login__content-headline::before {
+                        content: "{{ config('SschreierCustomizingAdministrationLoginPage.config.contentHeadline') }}";
+                        font-size: {% if config('SschreierCustomizingAdministrationLoginPage.config.contentHeadlineFontSize') %}{{ config('SschreierCustomizingAdministrationLoginPage.config.contentHeadlineFontSize') }}{% else %}60{% endif %}px;
+                    }
+                {% else %}
+                    {% if config('SschreierCustomizingAdministrationLoginPage.config.contentHeadlineFontSize') %}
+                        .sw-login .sw-login__container .sw-login__content-headline {
+                            font-size: {{ config('SschreierCustomizingAdministrationLoginPage.config.contentHeadlineFontSize') }}px;
+                        }
+                    {% endif %}
+                {% endif %}
+
+                {% if config('SschreierCustomizingAdministrationLoginPage.config.contentHeadlineFontColor') %}
+                    .sw-login .sw-login__container .sw-login__content-headline::before {
+                        color: {{ config('SschreierCustomizingAdministrationLoginPage.config.contentHeadlineFontColor') }};
+                    }
+                {% endif %}
+            {% endif %}
+
+            {% if config('SschreierCustomizingAdministrationLoginPage.config.showContentSubHeadline') %}
+                {% if config('SschreierCustomizingAdministrationLoginPage.config.contentSubHeadline') %}
+                    .sw-login .sw-login__container .sw-login__content-headline::after {
+                        display: block;
+                        content: "{{ config('SschreierCustomizingAdministrationLoginPage.config.contentSubHeadline') }}";
+                        font-size: {% if config('SschreierCustomizingAdministrationLoginPage.config.contentSubHeadlineFontSize') %}{{ config('SschreierCustomizingAdministrationLoginPage.config.contentSubHeadlineFontSize') }}{% else %}14{% endif %}px;
+                        font-weight: normal;
+                        margin-top: {% if config('SschreierCustomizingAdministrationLoginPage.config.contentSubHeadlineMarginTop') %}{{ config('SschreierCustomizingAdministrationLoginPage.config.contentSubHeadlineMarginTop') }}{% else %}5{% endif %}px;
+                    }
+                {% endif %}
+
+                {% if config('SschreierCustomizingAdministrationLoginPage.config.contentSubHeadlineFontColor') %}
+                    .sw-login .sw-login__container .sw-login__content-headline::after {
+                        color: {{ config('SschreierCustomizingAdministrationLoginPage.config.contentSubHeadlineFontColor') }};
+                    }
+                {% endif %}
+            {% endif %}
+        </style>
+     {% endblock %}
+
+    {% block administration_templates_customizingadministrationloginpage_after %}{% endblock %}
+{% endblock %}

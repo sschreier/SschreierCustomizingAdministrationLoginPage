@@ -1,7 +1,7 @@
 {
   "name": "sschreier/customizingadministrationloginpage",
-  "description": "a extension which customizing the administration login page",
-  "version": "1.0.0",
+  "description": "customizing the administration login page",
+  "version": "1.0.1",
   "type": "shopware-platform-plugin",
   "license": "GPL-3.0-or-later",
   "authors": [

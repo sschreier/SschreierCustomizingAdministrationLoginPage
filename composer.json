@@ -1,42 +1,42 @@
 {
-  "name": "sschreier/customizingadministrationloginpage",
-  "description": "customizing the administration login page",
-  "version": "1.0.1",
-  "type": "shopware-platform-plugin",
-  "license": "GPL-3.0-or-later",
-  "authors": [
-    {
-      "name": "Sebastian Schreier",
-      "role": "Manufacturer"
-    }
-  ],
-  "require": {
-    "shopware/administration": "~6.6.0"
-  },
-  "extra": {
-    "shopware-plugin-class": "Sschreier\\CustomizingAdministrationLoginPage\\SschreierCustomizingAdministrationLoginPage",
-    "plugin-icon": "src/Resources/config/plugin.png",
-    "copyright": "Sebastian Schreier",
-    "label": {
-      "de-DE": "Individualisieren der Anmeldeseite der Administration",
-      "en-GB": "customizing the administration login page"
+    "name": "sschreier/customizingadministrationloginpage",
+    "description": "customizing the administration login page",
+    "version": "1.1.0",
+    "type": "shopware-platform-plugin",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Sebastian Schreier",
+            "role": "Manufacturer"
+        }
+    ],
+    "require": {
+        "shopware/administration": "~6.7.0"
     },
-    "description": {
-      "de-DE": "Über die Erweiterung kann man die Anmeldeseite der Administration individualisieren. Es ist zum Beispiel möglich, darüber die Hintergrundfarbe der Seite festzulegen oder die linke Seite komplett auszublenden. Bei der linken Seite kann das Hintergrundbild ausgetauscht oder eine eigene Hintergrundfarbe gesetzt werden. Bei Bedarf kann man außerdem die Überschrift ausblenden, auswechseln oder dessen Schriftgröße, Schriftfarbe oder Abstände verändern. Dies ist auch für den Text unterhalb der Überschrift möglich. Bei der rechten Seite ist es beispielsweise möglich, das Shopware-Logo auszublenden oder die Innenabstände zu verändern. Außerdem kann auch bei dieser bei Bedarf die Überschrift ausgeblendet, ausgewechselt oder dessen Schriftgröße und Schriftfarbe verändert werden. Ebenso ist es möglich, sich einen Text unterhalb der Überschrift anzeigen zu lassen und dessen Gestaltung zu beeinflussen.",
-      "en-GB": "The extension allows you to customize the administration login page. For example, it is possible to set the background color of the page or to hide the left side completely. For the left side, the background image can be changed or an individual background color can be set. If necessary, you can also hide the headline, replace it, or change its font size, font color or spacing. This is also possible for the sub headline. For the right side, for example, it is possible to hide the shopware badge or change the inner distance. In addition, the headline can be hidden, replaced or its font size and color can be changed if required. It is also possible to display a sub headline and influence its design."
+    "extra": {
+        "shopware-plugin-class": "Sschreier\\CustomizingAdministrationLoginPage\\SschreierCustomizingAdministrationLoginPage",
+        "plugin-icon": "src/Resources/config/plugin.png",
+        "copyright": "Sebastian Schreier",
+        "label": {
+            "de-DE": "Individualisieren der Anmeldeseite der Administration",
+            "en-GB": "customizing the administration login page"
+        },
+        "description": {
+            "de-DE": "Über die Erweiterung kann man die Anmeldeseite der Administration individualisieren. Es ist zum Beispiel möglich, darüber die Hintergrundfarbe der Seite festzulegen oder die linke Seite komplett auszublenden. Bei der linken Seite kann das Hintergrundbild ausgetauscht oder eine eigene Hintergrundfarbe gesetzt werden. Bei Bedarf kann man außerdem die Überschrift ausblenden, auswechseln oder dessen Schriftgröße, Schriftfarbe oder Abstände verändern. Dies ist auch für den Text unterhalb der Überschrift möglich. Bei der rechten Seite ist es beispielsweise möglich, das Shopware-Logo auszublenden oder die Innenabstände zu verändern. Außerdem kann auch bei dieser bei Bedarf die Überschrift ausgeblendet, ausgewechselt oder dessen Schriftgröße und Schriftfarbe verändert werden. Ebenso ist es möglich, sich einen Text unterhalb der Überschrift anzeigen zu lassen und dessen Gestaltung zu beeinflussen.",
+            "en-GB": "The extension allows you to customize the administration login page. For example, it is possible to set the background color of the page or to hide the left side completely. For the left side, the background image can be changed or an individual background color can be set. If necessary, you can also hide the headline, replace it, or change its font size, font color or spacing. This is also possible for the sub headline. For the right side, for example, it is possible to hide the shopware badge or change the inner distance. In addition, the headline can be hidden, replaced or its font size and color can be changed if required. It is also possible to display a sub headline and influence its design."
+        },
+        "manufacturerLink": {
+            "de-DE": "https://www.sebastianschreier.de",
+            "en-GB": "https://www.sebastianschreier.de"
+        },
+        "supportLink": {
+            "de-DE": "https://www.sebastianschreier.de",
+            "en-GB": "https://www.sebastianschreier.de"
+        }
     },
-    "manufacturerLink": {
-      "de-DE": "https://www.sebastianschreier.de",
-      "en-GB": "https://www.sebastianschreier.de"
-    },
-    "supportLink": {
-      "de-DE": "https://www.sebastianschreier.de",
-      "en-GB": "https://www.sebastianschreier.de"
+    "autoload": {
+        "psr-4": {
+            "Sschreier\\CustomizingAdministrationLoginPage\\": "src/"
+        }
     }
-  },
-  "autoload": {
-    "psr-4": {
-      "Sschreier\\CustomizingAdministrationLoginPage\\": "src/"
-    }
-  }
 }

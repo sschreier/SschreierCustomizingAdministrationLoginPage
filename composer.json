@@ -1,7 +1,7 @@
 {
     "name": "sschreier/customizingadministrationloginpage",
     "description": "customizing the administration login page",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "type": "shopware-platform-plugin",
     "license": "GPL-3.0-or-later",
     "authors": [
@@ -26,12 +26,12 @@
             "en-GB": "The extension allows you to customize the administration login page. For example, it is possible to set the background color of the page or to hide the left side completely. For the left side, the background image can be changed or an individual background color can be set. If necessary, you can also hide the headline, replace it, or change its font size, font color or spacing. This is also possible for the sub headline. For the right side, for example, it is possible to hide the shopware badge or change the inner distance. In addition, the headline can be hidden, replaced or its font size and color can be changed if required. It is also possible to display a sub headline and influence its design."
         },
         "manufacturerLink": {
-            "de-DE": "https://www.sebastianschreier.de",
-            "en-GB": "https://www.sebastianschreier.de"
+            "de-DE": "https://www.web-solutions-dresden.de",
+            "en-GB": "https://www.web-solutions-dresden.de"
         },
         "supportLink": {
-            "de-DE": "https://www.sebastianschreier.de",
-            "en-GB": "https://www.sebastianschreier.de"
+            "de-DE": "https://www.web-solutions-dresden.de",
+            "en-GB": "https://www.web-solutions-dresden.de"
         }
     },
     "autoload": {

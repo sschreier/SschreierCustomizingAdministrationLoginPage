@@ -96,36 +96,36 @@ bin/console plugin:install --activate SschreierCustomizingAdministrationLoginPag
 
 ### default administration login page
 
-![default administration login page](https://www.sebastianschreier.de/plugins/SschreierCustomizingAdministrationLoginPage/SschreierCustomizingAdministrationLoginPage-Image1.jpg)
+![default administration login page](https://www.web-solutions-dresden.de/plugins/SschreierCustomizingAdministrationLoginPage/SschreierCustomizingAdministrationLoginPage-Image1.jpg)
 
 ### administration login page with an individual background color instead of a background image, an individual headline and sub headline for the left side and a hidden headline for the right side
 
-![administration login page with an individual background color instead of a background image, an individual headline and sub headline for the left side and a hidden headline for the right side](https://www.sebastianschreier.de/plugins/SschreierCustomizingAdministrationLoginPage/SschreierCustomizingAdministrationLoginPage-Image2.jpg)
+![administration login page with an individual background color instead of a background image, an individual headline and sub headline for the left side and a hidden headline for the right side](https://www.web-solutions-dresden.de/plugins/SschreierCustomizingAdministrationLoginPage/SschreierCustomizingAdministrationLoginPage-Image2.jpg)
 
 ### extension configuration part 1
 
-![extension configuration part 1](https://www.sebastianschreier.de/plugins/SschreierCustomizingAdministrationLoginPage/SschreierCustomizingAdministrationLoginPage-Image3.jpg)
+![extension configuration part 1](https://www.web-solutions-dresden.de/plugins/SschreierCustomizingAdministrationLoginPage/SschreierCustomizingAdministrationLoginPage-Image3.jpg)
 
 ### extension configuration part 2
 
-![extension configuration part 2](https://www.sebastianschreier.de/plugins/SschreierCustomizingAdministrationLoginPage/SschreierCustomizingAdministrationLoginPage-Image4.jpg)
+![extension configuration part 2](https://www.web-solutions-dresden.de/plugins/SschreierCustomizingAdministrationLoginPage/SschreierCustomizingAdministrationLoginPage-Image4.jpg)
 
 ### extension configuration part 3
 
-![extension configuration part 3](https://www.sebastianschreier.de/plugins/SschreierCustomizingAdministrationLoginPage/SschreierCustomizingAdministrationLoginPage-Image5.jpg)
+![extension configuration part 3](https://www.web-solutions-dresden.de/plugins/SschreierCustomizingAdministrationLoginPage/SschreierCustomizingAdministrationLoginPage-Image5.jpg)
 
 ### extension configuration part 4
 
-![extension configuration part 4](https://www.sebastianschreier.de/plugins/SschreierCustomizingAdministrationLoginPage/SschreierCustomizingAdministrationLoginPage-Image6.jpg)
+![extension configuration part 4](https://www.web-solutions-dresden.de/plugins/SschreierCustomizingAdministrationLoginPage/SschreierCustomizingAdministrationLoginPage-Image6.jpg)
 
 ### extension configuration part 5
 
-![extension configuration part 5](https://www.sebastianschreier.de/plugins/SschreierCustomizingAdministrationLoginPage/SschreierCustomizingAdministrationLoginPage-Image7.jpg)
+![extension configuration part 5](https://www.web-solutions-dresden.de/plugins/SschreierCustomizingAdministrationLoginPage/SschreierCustomizingAdministrationLoginPage-Image7.jpg)
 
 ### extension configuration part 6
 
-![extension configuration part 6](https://www.sebastianschreier.de/plugins/SschreierCustomizingAdministrationLoginPage/SschreierCustomizingAdministrationLoginPage-Image8.jpg)
+![extension configuration part 6](https://www.web-solutions-dresden.de/plugins/SschreierCustomizingAdministrationLoginPage/SschreierCustomizingAdministrationLoginPage-Image8.jpg)
 
 ### extension configuration part 7
 
-![extension configuration part 7](https://www.sebastianschreier.de/plugins/SschreierCustomizingAdministrationLoginPage/SschreierCustomizingAdministrationLoginPage-Image9.jpg)
+![extension configuration part 7](https://www.web-solutions-dresden.de/plugins/SschreierCustomizingAdministrationLoginPage/SschreierCustomizingAdministrationLoginPage-Image9.jpg)
